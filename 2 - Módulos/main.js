@@ -1,0 +1,8 @@
+var somaF = require("./soma")
+var subF = require("./subt")
+var multiF = require("./multi")
+var divF = require("./divis")
+console.log(subF(10,5))
+console.log(somaF(1,3))
+console.log(multiF(10,10))
+console.log(divF(8,2))

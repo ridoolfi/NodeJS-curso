@@ -1,0 +1,24 @@
+const express = require('express')
+const app = express();
+
+app.get("/", function(req, res){
+    res.send("Seja bem vindo ao meu app utilizando Express.")
+});
+
+app.get("/sobre", function(req, res){
+    res.send("Minha Pagina Sobre")
+})
+
+app.get("/blog", function(req,res){
+    res.send("Bem vindo ao meu blog!")
+})
+
+app.get("/ola/:nome/:cargo/:naturalidade", function(req, res){
+    res.send(`<h1>Olá <strong>${req.params.nome}</strong></h1><h2> Seu cargo é: ${req.params.cargo}</h2><h3>Sua naturalidade ${req.params.naturalidade}</h3>`)
+})
+
+
+
+app.listen(5101, function(){
+    console.log("Servidor rodando na porta 5101")
+});
